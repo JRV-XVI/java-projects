@@ -1,3 +1,58 @@
-Data structure
+# Question 1 | Exam Hall Check-In System
+A university needs a system to record the order in which students arrive to take their exam. The
+system must:
+- Preserve arrival order (first come, first recorded)
+- Allow index-based access to generate numbered reports
+- Grow dynamically as students arrive at any time
+- Support searching whether a student has already checked in
+- Expected group size: 30 to 50 students
 
-Question 1
+Which List implementation would you use: ArrayList or LinkedList? Justify your answer by considering which operations happen most frequently.
+
+Hint: Think about what happens more often: random index access or adding to the end?
+
+Chosen structure:
+Justification: 
+
+# Question 2 | Unique Student ID Validation
+An online learning platform needs to quickly verify whether a student ID is already registered. The system must:
+- Guarantee no duplicate IDs exist
+- Check membership in O(1) time
+- Order of insertion is irrelevant
+- Handle up to 100,000 student IDs
+
+Which Set implementation would you choose? Consider HashSet, LinkedHashSet, and TreeSet. Justify why you discard the other two options.
+
+Hint: Order doesn't matter at all — only lookup speed does.
+
+Chosen structure:
+Justification:
+
+# Question 3 | Shared Office Printer Queue
+An office has a single shared printer used by several departments. Documents pile up while the printer is busy. The system must:
+- Process documents in arrival order (FIFO)
+- Allow urgent documents to be inserted at the front of the queue
+- Show how many documents are pending
+- Cancel the last document added if it was sent by mistake
+
+Would you use Queue or Deque? Which concrete implementation (ArrayDeque,
+PriorityQueue, LinkedList)? Justify considering all required operations.
+
+Hint: Do you need to add/remove from both ends of the queue?
+
+Chosen structure:
+Justification:
+
+# Question 4 | Student Grade Book
+A school system needs to store student grades per subject. The system must:
+- Map each student's name to a (subject → grade) mapping
+- Quickly retrieve all subjects for a given student
+- Generate reports sorted alphabetically by student name
+- Update grades without removing others
+
+Which Map implementation would you use for the outer map (student → subjects)? What about the inner map (subject → grade)? They can be different. Justify both choices.
+
+Hint: Alphabetical order in the report is a key hint for the outer map.
+
+Chosen structure:
+Justification:
