@@ -1,6 +1,5 @@
 # Question 1 | Exam Hall Check-In System
-A university needs a system to record the order in which students arrive to take their exam. The
-system must:
+A university needs a system to record the order in which students arrive to take their exam. The system must:
 - Preserve arrival order (first come, first recorded)
 - Allow index-based access to generate numbered reports
 - Grow dynamically as students arrive at any time
@@ -11,9 +10,8 @@ Which List implementation would you use: ArrayList or LinkedList? Justify your a
 
 Hint: Think about what happens more often: random index access or adding to the end?
 
-Chosen structure:
-Justification: 
-
+Chosen structure: ArrayList
+Justification: Because we need to have storage, index-based access, and the ability to add new elements dynamically, ArrayList is the one. If we choose a LinkedList, the adding operation is one of the best, but accessing a specific index is costly in terms of time complexity, being O(n) on average, because it needs to check each element from 0 to n - 1. Meanwhile, ArrayList accesses elements in O(1) in worst, best, and average cases.
 # Question 2 | Unique Student ID Validation
 An online learning platform needs to quickly verify whether a student ID is already registered. The system must:
 - Guarantee no duplicate IDs exist
