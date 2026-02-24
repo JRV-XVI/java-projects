@@ -38,8 +38,21 @@ Which Set implementation would you choose? Consider HashSet, LinkedHashSet, and 
 
 Hint: Order doesn't matter at all — only lookup speed does.
 
-Chosen structure:
-Justification:
+Chosen structure: HashSet
+Justification: For the first requirement of the system that needs to guarantee no duplicates, all the Sets guarantee that. The next req, that needs to check membership in O(1), there are only two options, the HashSet and LinkedHashSet but the third requirement decides what type we need to use, it says that Order of insertion is irrelevant, the only option that dont fits in that req is LinkedHashSet because it can remember the order of insertion, so finally we have HashSet to this exercise. TreeSet doesn't fit the req to checks in O(1), it cheks in O(log n) becuase of the implementation of a tree inside.
+
+Code snippet: File SystemIDValidation.java
+
+```
+New System
+Adding student A001. It's added? ->true
+Adding student A002. It's added? ->true
+Adding student A003. It's added? ->true
+Adding student A001. It's added? ->false
+The student A001 exist? ->true
+The student A999 exist? ->false
+Total IDs: 3
+```
 
 # Question 3 | Shared Office Printer Queue
 An office has a single shared printer used by several departments. Documents pile up while the printer is busy. The system must:
