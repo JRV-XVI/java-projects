@@ -12,6 +12,21 @@ Hint: Think about what happens more often: random index access or adding to the 
 
 Chosen structure: ArrayList
 Justification: Because we need to have storage, index-based access, and the ability to add new elements dynamically, ArrayList is the one. If we choose a LinkedList, the adding operation is one of the best, but accessing a specific index is costly in terms of time complexity, being O(n) on average, because it needs to check each element from 0 to n - 1. Meanwhile, ArrayList accesses elements in O(1) in worst, best, and average cases.
+
+Code snippet: File InnerSchoolSystem.java
+
+Output:
+
+```
+New system
+[]
+[John]
+[John, Martin]
+[John, Martin, Pedro]
+Consulting student at index 0
+John
+```
+
 # Question 2 | Unique Student ID Validation
 An online learning platform needs to quickly verify whether a student ID is already registered. The system must:
 - Guarantee no duplicate IDs exist

@@ -30,6 +30,8 @@ public class InnerSchoolSystem {
 		System.out.println(schoolSystem.getList());
 		schoolSystem.addStudent("Martin");
 		System.out.println(schoolSystem.getList());
+		schoolSystem.addStudent("Pedro");
+		System.out.println(schoolSystem.getList());
 		System.out.println("Consulting student at index 0");
 		System.out.println(schoolSystem.getStudent(0));
 	}
