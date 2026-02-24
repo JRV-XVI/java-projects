@@ -43,6 +43,8 @@ Justification: For the first requirement of the system that needs to guarantee n
 
 Code snippet: File SystemIDValidation.java
 
+Output:
+
 ```
 New System
 Adding student A001. It's added? ->true
