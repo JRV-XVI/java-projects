@@ -76,7 +76,7 @@ Hint: Do you need to add/remove from both ends of the queue?
 - `removeLast()`
 
 ### Justification
-While a **Queue** data structure would be useful to process documents in arrival order, it would be insufficient to satisfy every requirement. **Deque** can provide what Queue can do by adding documents in arrival order with `addLast()`, while also providing some additional methods. `addFirst()` allows to add urgent documents at the start of the printing queue, and last added documents can be delete with `removeLast()`. It also has the `size()` method, which can be used to see how many documents are pending.
+While a **Queue** data structure would be useful to process documents in arrival order, it would be insufficient to satisfy every requirement. **Deque** can provide what Queue can do by adding documents in arrival order with `addLast()`, while also providing some additional methods. `addFirst()` allows to add urgent documents at the start of the printing queue, and last added documents can be deleted with `removeLast()`. It also has the `size()` method, which can be used to see how many documents are pending.
 
 The best concrete implementation for this in Java would be an **`ArrayDeque`** because it implements `Deque` and allows for:
 - O(1) add/remove at both ends
