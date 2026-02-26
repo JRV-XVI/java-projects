@@ -68,8 +68,23 @@ PriorityQueue, LinkedList)? Justify considering all required operations.
 
 Hint: Do you need to add/remove from both ends of the queue?
 
-Chosen structure:
-Justification:
+### Chosen structure
+**Deque:** To process documents in arrival order, allow urgent documents to be inserted at the front, and to cancel the last document added
+- `addFirst()`
+- `addLast()`
+- `size()`
+- `removeLast()`
+
+### Justification
+While a **Queue** data structure would be useful to process documents in arrival order, it would be insufficient to satisfy every requirement. **Deque** can provide what Queue can do by adding documents in arrival order with `addLast()`, while also providing some additional methods. `addFirst()` allows to add urgent documents at the start of the printing queue, and last added documents can be delete with `removeLast()`. It also has the `size()` method, which can be used to see how many documents are pending.
+
+The best concrete implementation for this in Java would be an **`ArrayDeque`** because it implements `Deque` and allows for:
+- O(1) add/remove at both ends
+- No node overhead (array-backed)
+- Faster than LinkedList in practice
+- No capacity limit (resizes automatically)
+
+This structure follows the **FIFO** principle and also supports front insertion.
 
 # Question 4 | Student Grade Book
 A school system needs to store student grades per subject. The system must:
