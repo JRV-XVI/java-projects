@@ -139,14 +139,15 @@ Hint: Alphabetical order in the report is a key hint for the outer map.
 
 ### Justification 
 **Outer Map - TreeMap:**  
-- **Orden alfabético automático:** TreeMap organiza los nombres de los estudiantes en orden alfabético, facilitando la generación de reportes sin pasos adicionales de ordenamiento.  
-- **Reportes eficientes:** Al recorrer el TreeMap, los estudiantes ya están ordenados alfabéticamente, lo que permite generar reportes de manera directa y eficiente (O(n)).  
-- **Buen rendimiento:** Las operaciones de inserción y búsqueda tienen una complejidad de O(log n), lo cual es adecuado para el tamaño típico de una lista de estudiantes.
+- **Automatic alphabetical order:** TreeMap organizes student names alphabetically, making report generation easier without additional sorting steps.  
+- **Efficient reporting:** When iterating through the TreeMap, students are already alphabetically ordered, allowing direct and efficient report generation (O(n)).  
+- **Good performance:** Insert and search operations have a complexity of O(log n), which is suitable for the typical size of a student list.
 
 **Inner Map - HashMap:**  
-- **Acceso eficiente:** HashMap permite acceder, insertar y actualizar calificaciones de materias en tiempo promedio O(1).  
-- **Sin necesidad de orden:** No es necesario que las materias estén ordenadas, ya que el requisito de orden solo aplica a los estudiantes.  
-- **Óptimo para actualizaciones:** HashMap es más rápido que TreeMap para las operaciones frecuentes de actualización de calificaciones.  
-- **Versatilidad:** Permite agregar o modificar materias fácilmente sin afectar la estructura.
+- **Efficient access:** HashMap allows access, insertion, and updating of subject grades in average O(1) time.  
+- **No need for ordering:** Subjects don’t need to be ordered since the ordering requirement only applies to students.  
+- **Optimal for updates:** HashMap is faster than TreeMap for frequent grade updates.  
+- **Versatility:** It allows adding or modifying subjects easily without affecting the structure.
 
-Esta estructura aprovecha el orden automático del TreeMap para los reportes y la rapidez del HashMap para gestionar las calificaciones de cada materia.
+This structure leverages TreeMap’s automatic ordering for reports and HashMap’s speed for managing subject grades.
+
