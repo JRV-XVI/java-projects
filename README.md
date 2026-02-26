@@ -10,12 +10,14 @@ Which List implementation would you use: ArrayList or LinkedList? Justify your a
 
 Hint: Think about what happens more often: random index access or adding to the end?
 
-Chosen structure: ArrayList
-Justification: Because we need to have storage, index-based access, and the ability to add new elements dynamically, ArrayList is the one. If we choose a LinkedList, the adding operation is one of the best, but accessing a specific index is costly in terms of time complexity, being O(n) on average, because it needs to check each element from 0 to n - 1. Meanwhile, ArrayList accesses elements in O(1) in worst, best, and average cases.
+### Chosen structure
+ArrayList
+### Justification
+Because we need to have storage, index-based access, and the ability to add new elements dynamically, ArrayList is the one. If we choose a LinkedList, the adding operation is one of the best, but accessing a specific index is costly in terms of time complexity, being O(n) on average, because it needs to check each element from 0 to n - 1. Meanwhile, ArrayList accesses elements in O(1) in worst, best, and average cases.
 
-Code snippet: File InnerSchoolSystem.java
+**Code snippet:** File InnerSchoolSystem.java
 
-Output:
+#### Output:
 
 ```
 New system
@@ -38,12 +40,14 @@ Which Set implementation would you choose? Consider HashSet, LinkedHashSet, and 
 
 Hint: Order doesn't matter at all — only lookup speed does.
 
-Chosen structure: HashSet
-Justification: For the first requirement of the system that needs to guarantee no duplicates, all the Sets guarantee that. The next req, that needs to check membership in O(1), there are only two options, the HashSet and LinkedHashSet but the third requirement decides what type we need to use, it says that Order of insertion is irrelevant, the only option that dont fits in that req is LinkedHashSet because it can remember the order of insertion, so finally we have HashSet to this exercise. TreeSet doesn't fit the req to checks in O(1), it cheks in O(log n) becuase of the implementation of a tree inside.
+### Chosen structure
+HashSet
+### Justification
+For the first requirement of the system that needs to guarantee no duplicates, all the Sets guarantee that. The next req, that needs to check membership in O(1), there are only two options, the HashSet and LinkedHashSet but the third requirement decides what type we need to use, it says that Order of insertion is irrelevant, the only option that dont fits in that req is LinkedHashSet because it can remember the order of insertion, so finally we have HashSet to this exercise. TreeSet doesn't fit the req to checks in O(1), it cheks in O(log n) becuase of the implementation of a tree inside.
 
-Code snippet: File SystemIDValidation.java
+**Code snippet:** File SystemIDValidation.java
 
-Output:
+#### Output:
 
 ```
 New System
@@ -86,6 +90,38 @@ The best concrete implementation for this in Java would be an **`ArrayDeque`** b
 
 This structure follows the **FIFO** principle and also supports front insertion.
 
+**Code snippet:** Folder SharedOfficePrinterQueue
+
+#### Output:
+
+```
+Current queue:
+[Report Q1 | Finance]
+Pending: 1
+
+Submitted: [Employee List | HR]
+
+Current queue:
+[Report Q1 | Finance]
+[Employee List | HR]
+Pending: 2
+
+URGENT submitted: [CEO Contract | Executive]
+
+Current queue:
+[CEO Contract | Executive]
+[Report Q1 | Finance]
+[Employee List | HR]
+Pending: 3
+
+Printing: [CEO Contract | Executive]
+Printing: [Report Q1 | Finance]
+Cancelled: [Employee List | HR]
+
+Current queue:
+Pending: 0
+```
+
 # Question 4 | Student Grade Book
 A school system needs to store student grades per subject. The system must:
 - Map each student's name to a (subject → grade) mapping
@@ -97,11 +133,11 @@ Which Map implementation would you use for the outer map (student → subjects)?
 
 Hint: Alphabetical order in the report is a key hint for the outer map.
 
-Chosen structure:  
+### Chosen structure 
 **Outer Map (Student → Subjects):** `TreeMap<String, Map<String, Double>>`  
 **Inner Map (Subject → Grade):** `HashMap<String, Double>`
 
-Justification:  
+### Justification 
 **Outer Map - TreeMap:**  
 - **Orden alfabético automático:** TreeMap organiza los nombres de los estudiantes en orden alfabético, facilitando la generación de reportes sin pasos adicionales de ordenamiento.  
 - **Reportes eficientes:** Al recorrer el TreeMap, los estudiantes ya están ordenados alfabéticamente, lo que permite generar reportes de manera directa y eficiente (O(n)).  
